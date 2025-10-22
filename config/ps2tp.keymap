@@ -5,7 +5,10 @@
 
 #include "include/mouse_tp.dtsi"
 
+#define MOUSE_TP 0
+
 #define HAS_MOUSE_TP
+
 
 / {
     keymap {
