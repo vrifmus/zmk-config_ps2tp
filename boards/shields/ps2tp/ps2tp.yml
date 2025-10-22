@@ -1,6 +1,6 @@
 file_format: '1'
-id: pimtb
-name: PimTB
+id: ps2tp
+name: PS2TP
 type: shield
 url: https://github.com/vrifmus/zmk-config_ps2tp
 requires: [nice_nano_v2]
