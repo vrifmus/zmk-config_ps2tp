@@ -1,9 +1,11 @@
 #include <behaviors.dtsi>
-#include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
 
 #include "include/mouse_tp.dtsi"
+
+#define HAS_MOUSE_TP
 
 / {
     keymap {
