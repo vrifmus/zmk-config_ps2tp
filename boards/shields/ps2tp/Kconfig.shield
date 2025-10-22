@@ -1,0 +1,2 @@
+config SHIELD_PS2TP
+    def_bool $(shields_list_contains,ps2tp)
