@@ -1,7 +1,7 @@
 #include "ps2tp.dtsi"
 
 
-// #define MOUSE_PS2_DRIVER_UART
+#define MOUSE_PS2_DRIVER_UART
 
 
 #define MOUSE_PS2_PIN_SCL_PRO_MICRO <&pro_micro 1 GPIO_ACTIVE_HIGH>
