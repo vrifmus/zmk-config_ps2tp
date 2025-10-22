@@ -10,7 +10,4 @@ config I2C
 config ZMK_SPLIT
 	default n
 
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
 endif
