@@ -4,4 +4,7 @@ if SHIELD_PS2TP
 config ZMK_KEYBOARD_NAME
     default "PS2 TrackPoint"
 
+config I2C
+    default y
+
 endif

@@ -13,7 +13,6 @@
 
 #define MOUSE_PS2_UART_BAUD_RATE <14400>
 
-
 #define MOUSE_PS2_PIN_UNEXPOSED_TX <NRF_PSEL(UART_TX, 0, 27)>
 #define MOUSE_PS2_PIN_UNEXPOSED_RX <NRF_PSEL(UART_RX, 0, 28)>
 
@@ -225,7 +224,6 @@
 
 
 #ifdef MOUSE_PS2_DRIVER_UART
-
     &uart0 {
         status = "disabled";
         compatible = "nordic,nrf-uarte";
@@ -243,9 +241,7 @@
             sda-gpios = MOUSE_PS2_PIN_SDA_PRO_MICRO;
         };
     };
-
 #else
-
     / {
         gpio_ps2: gpio_ps2 {
             status = "disabled";
@@ -255,7 +251,6 @@
             sda-gpios = MOUSE_PS2_PIN_SDA_PRO_MICRO;
         };
     };
-
 #endif
 
 
@@ -264,15 +259,15 @@
 		status = "disabled";
         compatible = "zmk,input-mouse-ps2";
 
-        #ifdef MOUSE_PS2_DRIVER_UART
+#ifdef MOUSE_PS2_DRIVER_UART
 	        ps2-device = <&uart_ps2>;
-        #else
+#else
 	        ps2-device = <&gpio_ps2>;
-        #endif
+#endif
 
-        #ifdef MOUSE_PS2_PIN_RST_PRO_MICRO
+#ifdef MOUSE_PS2_PIN_RST_PRO_MICRO
             rst-gpios = MOUSE_PS2_PIN_RST_PRO_MICRO;
-        #endif
+#endif
     };
 
     mouse_ps2_input_listener: mouse_ps2_input_listener {
