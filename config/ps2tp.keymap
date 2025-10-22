@@ -1,13 +1,23 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <behaviors/mouse_keys.dtsi>
-#include <dt-bindings/zmk/mouse.h>
 
-#include "include/mouse_tp.dtsi"
-
+#define MOUSE_KEYS 0
 #define MOUSE_TP 0
+#define MOUSE_TP_SET 0
 
+#define HAS_MOUSE_KEYS
 #define HAS_MOUSE_TP
+
+#ifdef HAS_MOUSE_KEYS
+  #include <dt-bindings/zmk/mouse.h>
+  #include <behaviors/mouse_keys.dtsi>
+#endif  // HAS_MOUSE_KEYS
+
+#ifdef HAS_MOUSE_TP
+  // We store the trackpoint settings in a separate file
+  // to make organization a little easier.
+  #include "include/mouse_tp.dtsi"
+#endif  // HAS_MOUSE_TP
 
 
 / {
